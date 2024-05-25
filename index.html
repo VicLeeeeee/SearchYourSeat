@@ -47,7 +47,7 @@
         </div>
         <div class="result" id="result"></div>
         <div class="image-container">
-            <img id="seatingImage" src="seating_chart.jpg" alt="Seating Chart" style="max-width: 100%;">
+            <img id="seatingImage" src="images/seating_chart.jpg" alt="Seating Chart" style="max-width: 100%;">
         </div>
     </div>
 
@@ -76,6 +76,7 @@
         function highlightSeatOnImage(seat) {
             // Implement the logic to highlight the seat on the image
             // For example, change the source of the image to a highlighted version or overlay a marker
+            seatingImage.src = `images/seating_chart_${seat}.png`;
         }
     </script>
 </body>
