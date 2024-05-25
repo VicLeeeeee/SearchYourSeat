@@ -41,7 +41,6 @@
 <body>
     <div class="container">
         <h1>查詢座位小幫手</h1>
-        <h2>images/seating_chart_${seat}.png</h2>
         <div class="input-group">
             <input type="text" id="nameInput" placeholder="請輸入你的名字">
             <button onclick="showSeat()">確定</button>
@@ -66,7 +65,7 @@
             const seat = seatingChart[name];
             const resultDiv = document.getElementById('result');
             if (seat) {
-                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>.`;
+                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>.  images/seating_chart_${seat}.png `;
                 // Optional: Highlight seat on the image (if applicable)
                 highlightSeatOnImage(seat);
             } else {
