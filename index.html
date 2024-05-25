@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seating Chart</title>
+    <title>查詢座位</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,8 +42,8 @@
     <div class="container">
         <h1>Seating Chart</h1>
         <div class="input-group">
-            <input type="text" id="nameInput" placeholder="Enter your name">
-            <button onclick="showSeat()">Confirm</button>
+            <input type="text" id="nameInput" placeholder="請輸入你的名字">
+            <button onclick="showSeat()">確定</button>
         </div>
         <div class="result" id="result"></div>
         <div class="image-container">
@@ -56,6 +56,7 @@
             "Alice": "A1",
             "Bob": "B2",
             "Charlie": "C3",
+            "李易儒":"87",
             // Add more names and seats as needed
         };
 
@@ -64,11 +65,11 @@
             const seat = seatingChart[name];
             const resultDiv = document.getElementById('result');
             if (seat) {
-                resultDiv.innerHTML = `${name}, your seat is <span class="highlight">${seat}</span>.`;
+                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>.`;
                 // Optional: Highlight seat on the image (if applicable)
                 highlightSeatOnImage(seat);
             } else {
-                resultDiv.textContent = `Sorry, no seat found for ${name}.`;
+                resultDiv.textContent = `抱歉, 沒有找到你的名字 ${name}, 請聯絡現場人員`;
             }
         }
 
