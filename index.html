@@ -65,7 +65,7 @@
             const seat = seatingChart[name];
             const resultDiv = document.getElementById('result');
             if (seat) {
-                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>. `;
+                resultDiv.innerHTML = `Dear ${name}, 你的位置在 <span class="highlight">${seat}</span>. `;
                 // Optional: Highlight seat on the image (if applicable)
                 highlightSeatOnImage(seat);
             } else {
