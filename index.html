@@ -67,13 +67,13 @@
             if (seat) {
                 resultDiv.innerHTML = `Dear ${name}, 你的位置在 <span class="highlight">${seat}</span>. `;
                 // Optional: Highlight seat on the image (if applicable)
-                highlightSeatOnImage(seat);
+                highlightSeatOnImage(name);
             } else {
                 resultDiv.textContent = `抱歉, 沒有找到你的名字 ${name}, 請聯絡現場人員`;
             }
         }
 
-        function highlightSeatOnImage(seat) {
+        function highlightSeatOnImage(name) {
             // Implement the logic to highlight the seat on the image
             // For example, change the source of the image to a highlighted version or overlay a marker
             seatingImage.src = `images/seating_chart_${name}.png`;
