@@ -29,6 +29,13 @@
             font-size: 18px;
             margin-top: 20px;
         }
+        .image-container {
+            margin-top: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +46,9 @@
             <button onclick="showSeat()">Confirm</button>
         </div>
         <div class="result" id="result"></div>
+        <div class="image-container">
+            <img id="seatingImage" src="seating_chart.png" alt="Seating Chart" style="max-width: 100%;">
+        </div>
     </div>
 
     <script>
@@ -54,10 +64,17 @@
             const seat = seatingChart[name];
             const resultDiv = document.getElementById('result');
             if (seat) {
-                resultDiv.textContent = `${name}, your seat is ${seat}.`;
+                resultDiv.innerHTML = `${name}, your seat is <span class="highlight">${seat}</span>.`;
+                // Optional: Highlight seat on the image (if applicable)
+                highlightSeatOnImage(seat);
             } else {
                 resultDiv.textContent = `Sorry, no seat found for ${name}.`;
             }
+        }
+
+        function highlightSeatOnImage(seat) {
+            // Implement the logic to highlight the seat on the image
+            // For example, change the source of the image to a highlighted version or overlay a marker
         }
     </script>
 </body>
