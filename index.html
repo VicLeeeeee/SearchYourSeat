@@ -65,7 +65,7 @@
             const seat = seatingChart[name];
             const resultDiv = document.getElementById('result');
             if (seat) {
-                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>.  images/seating_chart_${name}.png `;
+                resultDiv.innerHTML = `${name}, 你的位置在 <span class="highlight">${seat}</span>. `;
                 // Optional: Highlight seat on the image (if applicable)
                 highlightSeatOnImage(seat);
             } else {
@@ -76,7 +76,7 @@
         function highlightSeatOnImage(seat) {
             // Implement the logic to highlight the seat on the image
             // For example, change the source of the image to a highlighted version or overlay a marker
-            seatingImage.src = `images/seating_chart_${seat}.png`;
+            seatingImage.src = `images/seating_chart_${name}.png`;
         }
     </script>
 </body>
